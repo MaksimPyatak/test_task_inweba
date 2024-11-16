@@ -211,6 +211,10 @@
     width: 100%;
     padding: 50px 0px 48px 0;
 
+    @include respond-below(xs) {
+      padding: 30px 0px 30px 0;
+    }
+
     &__container {
       display: grid;
       grid-template: 'content content image' 1fr/ 2fr 1fr;
@@ -227,7 +231,7 @@
 
     &__content {
       grid-area: content;
-      padding: 101px 80px 101px 80px;
+      padding: 101px 80px 101px 77px;
       background: $midnightBlueColor;
       border-radius: 20px;
 
@@ -328,6 +332,10 @@
   width: 100%;
   padding: 70px 0px 72px 0px;
   background: $foggyGrayColor;
+
+  @include respond-below(xs) {
+    padding: 30px 0px 30px 0px;
+  }
 
   &__container {
     display: grid;
@@ -436,6 +444,10 @@
 .about-us-section {
   width: 100%;
   padding: 50px 0px 50px 0px;
+
+  @include respond-below(xs) {
+    padding: 30px 0px 30px 0px;
+  }
 
   &__container {
   }
@@ -675,6 +687,421 @@
 
     @include respond-below(xs) {
       font-size: 16px;
+    }
+  }
+}
+
+.our-courses-section {
+  width: 100%;
+  padding: 48px 0px 100px 0px;
+
+  @include respond-below(xs) {
+    padding: 30px 0px 30px 0px;
+  }
+
+  &__container {
+  }
+
+  &__title-block {
+    height: 63px;
+    margin: 0px 0px 20px 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+  }
+
+  &__course-block {
+    margin: 0px 0px 20px 0px;
+  }
+}
+.course-block {
+  width: 100%;
+  border: 2px solid $midnightBlueColor;
+  border-radius: 20px;
+  padding: 38px 38px 38px 38px;
+
+  @include respond-below(xs) {
+    padding: 25px;
+  }
+
+  &__title-block {
+    width: 100%;
+    margin: 0px 0px 41px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond-below(md) {
+      align-items: flex-start;
+    }
+
+    @include respond-below(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__title-box {
+    margin: 0px 40px 0px 0px;
+    display: flex;
+    align-items: center;
+
+    @include respond-below(md) {
+      align-items: flex-start;
+    }
+
+    @include respond-below(sm) {
+      margin: 0px 0px 20px 0px;
+    }
+  }
+
+  &__title-icon-block {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    margin: 0px 14px 0px 0px;
+    border-radius: 12px;
+    background: $midnightBlueColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include respond-below(xs) {
+      width: 45px;
+      min-width: 45px;
+      height: 45px;
+    }
+  }
+
+  &__title-icon {
+    width: 28px;
+    height: 28px;
+
+    @include respond-below(xs) {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__title {
+    text-align: left;
+  }
+
+  &__details-link {
+  }
+
+  &__short-description-list {
+    margin: 0px 0px 29px 0px;
+  }
+
+  &__course-description {
+    margin: 0px 0px 23px 0px;
+  }
+
+  &__price-box {
+    margin: 0px 0px 40px 0px;
+    display: flex;
+    align-items: center;
+    font-family: Roboto;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 150%;
+    text-align: left;
+    text-transform: uppercase;
+
+    @include respond-below(sm) {
+      font-size: 27px;
+    }
+
+    @include respond-below(xs) {
+      margin: 0px 0px 25px 0px;
+      font-size: 24px;
+    }
+  }
+
+  &__price-name {
+    border-right: 2px solid $midnightBlueColor;
+    padding: 0px 16px 0px 0px;
+    color: $midnightBlueColor;
+  }
+
+  &__cost {
+    padding: 0px 0px 0px 16px;
+    color: $midnightBlueColor;
+  }
+
+  &__button {
+    min-width: 216px;
+    display: inline-block;
+    padding: 14px 30px 14px 30px;
+    border-radius: 14px;
+    background: $midnightBlueColor;
+    font-family: 'Roboto', serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: center;
+    color: $lightMistColor;
+
+    @include respond-below(sm) {
+      font-size: 18px;
+    }
+
+    @include respond-below(xs) {
+      padding: 14px 15px 14px 15px;
+      font-size: 16px;
+    }
+
+    @include respond-below(xxs) {
+      min-width: unset;
+      width: 100%;
+    }
+
+    &:hover {
+      background-color: rgb(194, 209, 224);
+      color: rgb(0, 51, 102);
+    }
+  }
+}
+
+.details-link {
+  &__icon-block {
+  }
+
+  &__icon {
+  }
+
+  &__label {
+  }
+}
+
+.short-description-list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+
+  &__item {
+    margin: 0px 12px 12px 0px;
+    padding: 10px 16px 10px 16px;
+    border-radius: 23.5px;
+    background: $softBlueColor;
+    display: flex;
+    align-items: center;
+  }
+
+  &__item-icon {
+    width: 24px;
+    height: 24px;
+    margin: 0px 8px 0px 0px;
+  }
+
+  &__item-label {
+    font-weight: 500;
+    color: $blackColor;
+  }
+}
+
+.course-description {
+  width: 100%;
+  font-family: 'Roboto', serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 150%;
+
+  @include respond-below(sm) {
+    font-size: 16px;
+  }
+
+  @include respond-below(xs) {
+    font-size: 14px;
+  }
+
+  &__title {
+    font-family: 'Roboto', serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+
+    @include respond-below(sm) {
+      font-size: 18px;
+    }
+
+    @include respond-below(xs) {
+      font-size: 16px;
+    }
+  }
+
+  &__list {
+    margin: 18px 0px 0px 0px;
+  }
+
+  &__list-item {
+    &:not(:last-child) {
+      margin: 0px 0px 16px 0px;
+    }
+  }
+
+  &__list-item-title {
+    margin: 0px 0px 8px 0px;
+    font-weight: 500;
+  }
+
+  &__sublist {
+  }
+
+  &__sublist-item {
+    display: flex;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin: 0px 0px 4px 0px;
+    }
+  }
+
+  &__sublist-item-marker {
+    width: 24px;
+    height: 24px;
+    margin: 0px 16px 0px 0px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__text {
+  }
+}
+
+.contact-us {
+  width: 100%;
+  padding: 50px 0px 50px 0px;
+  background: $midnightBlueColor;
+
+  @include respond-below(xs) {
+    padding: 30px 0px 30px 0px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+
+    @include respond-below(md) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__title-block {
+    align-self: center;
+    color: $lightMistColor;
+  }
+
+  &__title {
+    margin: 4px 0px 5px 0px;
+    color: $lightMistColor;
+  }
+
+  &__subtitle {
+    max-width: 598px;
+    text-align: left;
+    color: $lightMistColor;
+  }
+
+  &__form {
+  }
+
+  &__form-field {
+  }
+
+  &__form-email {
+  }
+
+  &__form-button {
+  }
+}
+
+.form {
+  label {
+    position: relative;
+    display: block;
+  }
+
+  &__field {
+    width: 100%;
+    height: 64px;
+    margin: 0px 0px 24px 0px;
+    padding: 0 14px 0 14px;
+    border: 1px solid $veryLightGrey;
+    border-radius: 4px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: left;
+    color: $blackColor;
+
+    @include hidePlaceholder;
+
+    @include respond-below(xs) {
+      height: 50px;
+    }
+
+    &::placeholder {
+      font-family: Roboto;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 150%;
+      text-align: left;
+      color: $blackColor;
+    }
+
+    &_error {
+      border: 1px solid $redColor;
+    }
+  }
+
+  &__error {
+    position: absolute;
+    bottom: 80%;
+    left: 0;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid $redColor;
+    background: $whiteColor;
+    display: none;
+    color: $redColor;
+    z-index: 1;
+
+    &_show {
+      display: block;
+    }
+  }
+
+  &__button {
+    margin: 16px 0px 0px 0px;
+    padding: 14px 30px 14px 30px;
+    border-radius: 14px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 150%;
+    text-align: centr;
+
+    @include respond-below(sm) {
+      font-size: 18px;
+    }
+
+    @include respond-below(xs) {
+      margin: 6px 0px 0px 0px;
+      padding: 12px 30px 12px 30px;
+      font-size: 16px;
+    }
+
+    &:hover {
+      background-color: rgb(194, 209, 224);
+      color: rgb(0, 51, 102);
     }
   }
 }
